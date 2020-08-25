@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <!--    Spring-->
+    <!--1、启动Spring的容器  -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:spring-application.xml</param-value>
@@ -14,6 +15,7 @@
     <!--    Spring END-->
 
     <!--    SpringMVC-->
+    <!--2、springmvc的前端控制器，拦截所有请求  -->
     <servlet>
         <servlet-name>dispatcherServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -26,7 +28,7 @@
 
     <servlet-mapping>
         <servlet-name>dispatcherServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
     <!--    SpringMVC END-->
 </web-app>
