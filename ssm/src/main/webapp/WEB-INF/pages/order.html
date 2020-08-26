@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>index</title>
+    <link rel="stylesheet" type="text/css" href="css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="css/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+</head>
+<body>
+<div class="easyui-layout" style="width:700px;height:350px;">
+    <div data-options="region:'center',split:true" title="West" style="width:100%;">
+        <div id="tt" class="easyui-tabs"  data-options="fit:true,border:false">
+            <div title="订单管理" style="padding:10px;">
+                管理平台 >>工单管理
+                下单日期:<input class="easyui-datetimebox" id="starttime" name="starttime" style="width:150px"/>
+                <br>
+                <input type="text"/> <button>查询</button>
+                <table border="1">
+                    <tr><td>全部</td><td>待确认</td><td>带完工</td><td>待验收</td><td>异常</td></tr>
+                </table>
+            </div>
+            <div title="会员管理" data-options="selected:true" style="padding:10px;">
+                会员管理
+            </div>
+            <div title="用工单位管理" style="padding:10px">
+                用工单位管理
+            </div>
+            <div title="工单管理" style="padding:10px">
+                工单管理
+            </div>
+            <div title="分类管理" style="padding:10px">
+                分类管理
+            </div>
+            <div title="系统管理" style="padding:10px">
+                系统管理
+            </div>
+            <div title="客服管理" style="padding:10px">
+                客服管理
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $('#tt').tabs({tabPosition:"left"})
+</script>
+</html>

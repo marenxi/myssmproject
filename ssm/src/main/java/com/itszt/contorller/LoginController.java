@@ -10,10 +10,16 @@ import org.slf4j.Logger;
 public class LoginController {
     private final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
-    @RequestMapping("login")
-    public String login() {
-        logger.info("登录");
-        System.out.println("logger = " + "");
+    @RequestMapping("/")
+    public String index() {
         return "index";
+    }
+
+    @RequestMapping("login")
+    public String login(String username,String userpwd) {
+        logger.info("登录");
+        System.out.println(username);
+        System.out.println(userpwd);
+        return "order";
     }
 }
